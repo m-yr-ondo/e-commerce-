@@ -1,0 +1,38 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    namespace = "com.example.login"
+    compileSdk = 35 // Latest SDK (Android 14)
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17 // Required for AGP 8.4.0
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17" // Match Java 17
+    }
+
+    defaultConfig {
+        applicationId = "com.example.login"
+        minSdk = flutter.minSdkVersion.toInteger()
+        targetSdk = 35 // Android 14
+        versionCode = flutter.versionCode.toInteger()
+        versionName = flutter.versionName
+    }
+
+    buildTypes {
+        release {
+            signingConfig = signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}
