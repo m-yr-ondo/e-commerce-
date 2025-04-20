@@ -1,0 +1,1 @@
+this is a basic e-commerce app made in flutter . Its very basic  I have a login page and registration page. I used xampp for database but you can use whatever you see fit. When you click on the buy button the program will geenrate a receipt with you personal details and the product you aare buying.
